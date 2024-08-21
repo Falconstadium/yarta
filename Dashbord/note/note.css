@@ -1,0 +1,88 @@
+.note_app {
+  padding: 2rem 1rem !important;
+}
+
+.button_note_area button {
+  background-color: var(--green);
+  color: #121212;
+  padding: 0.3rem 1rem;
+  border-radius: 0.3rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
+}
+
+.button_note_area button:hover {
+  box-shadow: 0 1px 12px 2px var(--green);
+}
+
+.down_part .note_svg {
+  width: 3rem;
+  stroke: var(--green);
+  box-shadow: 0 1px 10px 1px var(--green);
+  border-radius: 50%;
+  height: 3rem;
+  padding: 0.5rem;
+}
+
+.note_label {
+  display: grid;
+  gap: 0.2em;
+  padding: 1rem 0;
+}
+
+.note_label textarea,
+.note_label input {
+  /* outline: none; */
+  border: none;
+  padding: 0.15rem 0.3rem;
+  border-radius: 0.2rem;
+}
+.note_label textarea:focus,
+.note_label input:focus {
+  outline: 2px solid var(--green);
+}
+
+.note_btns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.div_element {
+  background-color: var(--white);
+  color: var(--dark);
+  font-weight: 500;
+  margin-top: 2rem;
+  margin-inline: auto;
+  padding: 0.7rem 1.2rem;
+  border-radius: 0.4rem;
+  position: relative;
+}
+.div_element h1 {
+  text-transform: capitalize;
+}
+.div_element p {
+  font-weight: 500;
+  font-size: 0.925rem;
+}
+.remove_btn{
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  background-color: #ef4444;
+  color: #f9f9f9;
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.3rem;
+  transition: all 0.3s ease-in-out;
+  font-size: 0.8rem;
+}
+.remove_btn:hover {
+  background-color: #b91c1c;
+}
+
+@media (min-width: 1024px) {
+  .note_app {
+    padding: 2rem 3rem !important;
+  }
+}

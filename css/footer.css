@@ -1,0 +1,9 @@
+.footer{
+  text-align: center;
+  font-size: .85rem;
+  padding: .4rem;
+  background-color: var(--purple);
+  color: #f9f9f9;
+  font-weight: 500;
+  user-select: none;
+}

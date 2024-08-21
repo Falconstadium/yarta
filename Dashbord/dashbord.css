@@ -1,0 +1,73 @@
+.main_dashbord {
+  display: grid;
+}
+
+.todo,
+.note {
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 2rem 0;
+  border: 1px solid var(--white);
+}
+
+.todo h1,
+.note h1 {
+  color: var(--purple);
+}
+
+.todo p,
+.note p {
+  font-weight: 500;
+}
+
+.todo a,
+.note a {
+  display: flex;
+  color: var(--white);
+  align-items: center;
+  gap: 0.7em;
+  padding-top: 1rem;
+  transition: color 0.3s ease;
+}
+
+.todo a:hover,
+.note a:hover {
+  color: var(--blue-500);
+}
+
+.logout {
+  background-color: #c10016;
+  color: #f9f9f9;
+  padding: 0.4rem 1rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  border-radius: 0.3rem;
+  transition: all 0.3s ease-in-out;
+}
+.logout:hover {
+  background-color: #81001b;
+}
+
+.btn_dash{
+  margin: 0 auto;
+}
+
+.btns{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+}
+
+@media (min-width: 1024px) {
+  .main_dashbord {
+    grid-template-columns: repeat(2, 45%);
+    gap: 0;
+  }
+
+  .todo,
+  .note {
+    width: 500px;
+  }
+}
