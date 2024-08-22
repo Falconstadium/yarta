@@ -92,7 +92,8 @@
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  border: 1px solid var(--dark);
+  background-size: cover;
+  background-position: center;
 }
 .task_list.checked {
   color: #555;

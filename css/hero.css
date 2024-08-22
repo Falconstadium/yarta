@@ -12,7 +12,7 @@
   background-image: linear-gradient(90deg, var(--green), var(--purple));
   -webkit-background-clip: text;
   color: transparent;
-  font-weight: 400;
+  font-weight: 500;
   font-family: "Edu VIC WA NT Beginner", cursive;
 }
 
