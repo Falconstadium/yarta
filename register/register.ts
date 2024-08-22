@@ -29,7 +29,7 @@ const userEmail = document.getElementById('user-mail')!;
 const profilePic = document.getElementById('photo-profile')!;
 
 //firebase
-import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.13.0/firebase-app.js';
+import { initializeApp } from 'firebase/app';
 import {
   getAuth,
   createUserWithEmailAndPassword,
@@ -38,7 +38,7 @@ import {
   signInWithPopup,
   GoogleAuthProvider,
   onAuthStateChanged
-} from 'https://www.gstatic.com/firebasejs/10.13.0/firebase-auth.js';
+} from 'firebase/auth';
 
 const firebaseConfig = {
   apiKey: 'AIzaSyBFOe8sbx_Q_7bWr5ll4zWMuM4u-2D1EOM',
@@ -72,6 +72,7 @@ signupBtn?.addEventListener('click', () => {
     .catch((error: any) => {
       const errorCode = error.code;
       const errorMessage = error.message;
+      console.log(errorCode);
       console.log(errorMessage);
       // ..
     });
@@ -94,6 +95,7 @@ signInBtn?.addEventListener('click', () => {
     .catch((error: any) => {
       const errorCode = error.code;
       const errorMessage = error.message;
+      console.log(errorCode);
       console.log(errorMessage);
     });
 });
@@ -105,7 +107,8 @@ googleRegister?.addEventListener("click", () => {
   .then((result: any) => {
     // This gives you a Google Access Token. You can use it to access the Google API.
     const credential = GoogleAuthProvider.credentialFromResult(result);
-    const token = credential.accessToken;
+    const token = (<any>credential).accessToken;
+    console.log(token);
     // The signed-in user info.
     const user = result.user;
     console.log(user);
@@ -116,11 +119,14 @@ googleRegister?.addEventListener("click", () => {
     // Handle Errors here.
     const errorCode = error.code;
     const errorMessage = error.message;
+    console.log(errorCode);
     console.log(errorMessage);
     // The email of the user's account used.
     const email = error.customData.email;
+    console.log(email);
     // The AuthCredential type that was used.
     const credential = GoogleAuthProvider.credentialFromError(error);
+    console.log(credential);
     // ...
   });
 })
@@ -156,5 +162,6 @@ logoutBtn?.addEventListener("click", () => {
     window.location.href = "../register/register.html"
   }).catch((error: any) => {
     // An error happened.
+    console.log(error);
   });
 })
