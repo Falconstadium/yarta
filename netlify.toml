@@ -1,0 +1,13 @@
+[build]
+  publish = "dist"
+  command = "npm run build"
+
+[[redirects]]
+  from = "/register/*"
+  to = "/register/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/Dashbord/*"
+  to = "/Dashbord/:splat"
+  status = 200
